@@ -17,6 +17,11 @@ namespace SalesWebMvc.Services
             _context = context;
         }
 
+        public List<Seller> FindAll()
+        {
+            return _context.Seller.ToList();
+        }
+
         public async Task<List<Seller>> FindAllAsync()
         {
             return await _context.Seller.ToListAsync();
